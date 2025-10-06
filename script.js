@@ -20,3 +20,20 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+let badgeIndex = 0;
+
+function slideBadges(direction) {
+  const track = document.getElementById("badgeTrack");
+  const badges = document.querySelectorAll("#badgeTrack img");
+  const visibleCount = 3;
+  const totalBadges = badges.length;
+
+  badgeIndex += direction;
+
+  if (badgeIndex < 0) badgeIndex = 0;
+  if (badgeIndex > totalBadges - visibleCount) badgeIndex = totalBadges - visibleCount;
+
+  const offset = badgeIndex * (badges[0].offsetWidth + 20); // width + margin
+  track.style.transform = `translateX(-${offset}px)`;
+}

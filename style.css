@@ -542,3 +542,47 @@ form button:hover {
   background: #ffcc00;
   color: #111;
 }
+/* ===== BADGES/CERITICATE SECTION ===== */
+#badges {
+  text-align: center;
+}
+
+.badge-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.badge-slider {
+  overflow: hidden;
+  width: 70%;
+}
+
+.badge-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.badge-track img {
+  width: 150px;
+  height: 150px;
+  margin: 0 10px;
+  border-radius: 8px;
+  border: 2px solid #00c6ff;
+  background: rgba(255,255,255,0.05);
+}
+
+.arrow {
+  background: none;
+  border: none;
+  color: #00c6ff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.arrow:hover {
+  color: #ffcc00;
+}
